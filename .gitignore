@@ -1,0 +1,27 @@
+# Ignorar cachés de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignorar archivos temporales o de logs
+*.log
+*.tmp
+
+# Ignorar archivos de tests o cobertura
+coverage/
+*.cover
+*.py,cover
+.hypothesis/
+
+# Ignorar configuración de entorno (si alguna vez lo usas)
+.env
+*.env
+
+# Ignorar configuración de VS Code
+.vscode/
+
+# Ignorar carpetas de distribución (si algún día haces un paquete)
+build/
+dist/
+*.egg-info/
