@@ -17,21 +17,13 @@ def check_win(player, computer):
     print(f"Player chose: {player} and Computer chose: {computer}")
     if(player == computer):
         return "It's a tie!"
-    elif (player == "scissors"):
-        if (computer == "rock"):
-            return "Rock smashes scissors! You lose!"
-        else:
-            return "Scissors cut paper! You win!"
-    elif (player == "rock"):
-        if (computer == "paper"):
-            return "Paper covers rock! You lose!"
-        else:
-            return "Rock smashes scissors! You win!"
-    elif (player == "paper"):
-        if (computer == "scissors"):
-            return "Scissors cut paper! You lose!"
-        else:
-            return "Paper covers rock! You win!"
+    
+    wins = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
+
+    if wins[player] == computer:
+        return "Player wins!"
+    else:
+        return "Computer wins!"
 
 choices = get_choices()
 result = check_win(choices["player"], choices["computer"])
