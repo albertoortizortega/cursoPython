@@ -21,9 +21,9 @@ def check_win(player, computer):
     wins = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
 
     if wins[player] == computer:
-        return "Player wins!"
+        return f"{player.title()} wins against {computer}! You win!"
     else:
-        return "Computer wins!"
+        return f"{computer.title()} wins against {player}! You lose!"
 
 choices = get_choices()
 result = check_win(choices["player"], choices["computer"])
