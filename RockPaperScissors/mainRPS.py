@@ -25,6 +25,7 @@ def check_win(player, computer):
     else:
         return f"{computer.title()} wins against {player}! You lose!"
 
-choices = get_choices()
-result = check_win(choices["player"], choices["computer"])
-print(result)
+if __name__ == "__main__":
+    choices = get_choices()
+    result = check_win(choices["player"], choices["computer"])
+    print(result)
