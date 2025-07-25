@@ -124,3 +124,87 @@ inventario.setdefault("fresas", 25)
 print(f"Inventario después de añadir fresas: {inventario}")
 inventario.setdefault("manzanas", 60)
 print(f"Inventario después de intentar añadir manzanas: {inventario}")
+
+#STRINGS:
+#Exercise 1.1
+nombre = "Juan"
+apellido = "Pérez"
+nombre_completo = nombre + " " + apellido
+print(f"Nombre completo: {nombre_completo}")
+saludo = "Hola "
+saludo_triple = saludo * 3
+print(f"Saludo repetido: {saludo_triple}")
+
+#Exercise 1.2
+frase = "Python es divertido y poderoso"
+print(f"Frase original: {frase}")
+primer_caracter = frase[0]
+print(f"Primer carácter de la frase: {primer_caracter}")
+ultimo_caracter = frase[-1]
+print(f"Último carácter de la frase: {ultimo_caracter}")
+
+print(f"Subcadena de la frase (índices 7 a 15): {frase[7:16]}")
+subcadena_poderoso = frase[frase.index("poderoso"):]
+print(f"Subcadena 'poderoso': {subcadena_poderoso}")
+frase_reversa = frase[::-1] #[start,end,step]
+print(f"Frase al revés: {frase_reversa}")
+
+#Exercise 2.1
+texto_largo = "El perro de San Roque no tiene rabo porque Ramón Ramírez se lo ha cortado."
+if "perro" in texto_largo:
+    print("La frase contiene 'San Roque'")
+else:
+    print("La frase no contiene 'San Roque'")
+print(f"Índice de Ramón: {texto_largo.index('Ramón')}")
+texto_con_cola = texto_largo.replace("rabo", "cola")
+print(f"Texto después de reemplazar 'rabo' por 'cola': {texto_con_cola}")
+texto_o_reemplazada = texto_largo.replace("o", "X", 1)
+print(f"Texto después de reemplazar 'o' por 'X': {texto_o_reemplazada}")
+
+#Exercise 2.2
+elementos = "agua,fuego,tierra,aire"
+elementos_lista = elementos.split(",")
+print(f"Lista de elementos: {elementos_lista}")
+palabras = ["Python", "es", "fantástico"]
+frase_unida = " ".join(palabras)
+print(f"Frase unida: {frase_unida}")
+frase_con_guiones = "-".join(palabras)
+print(f"Frase unida con guiones: {frase_con_guiones}")
+
+#Exercise 3.1
+cadena_formato = "eStO Es uNa cAdEnA De pRueBA."
+print(f"Cadena original: {cadena_formato}")
+mayusculas = cadena_formato.upper()
+print(f"Cadena en mayúsculas: {mayusculas}")
+minusculas = cadena_formato.lower()
+print(f"Cadena en minúsculas: {minusculas}")
+capitalizada = cadena_formato.capitalize()
+print(f"Cadena capitalizada: {capitalizada}")
+titulo = cadena_formato.title()
+print(f"Cadena en formato título: {titulo}")
+
+#Exercise 3.2
+email = "usuario@ejemplo.com"
+print(f"Email original: {email}")
+if email.endswith(".com"):
+    print("El email termina con '.com'")
+else:
+    print("El email no termina con '.com'")
+if email.startswith("usuario"):
+    print("El email comienza con 'usuario'")
+else:
+    print("El email no comienza con 'usuario'")
+
+espacios = "   Hola, mundo!   "
+print(f"Texto original con espacios: '{espacios}'")
+espacios_eliminados = espacios.strip()
+print(f"Texto sin espacios al inicio y al final: '{espacios_eliminados}'")
+
+digitos = "1234567890"
+print(f"Texto original con dígitos: '{digitos}'")
+if digitos.isdigit():
+    print("El texto contiene solo dígitos")
+else:
+    print("El texto no contiene solo dígitos")
+
+
